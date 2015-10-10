@@ -31,9 +31,17 @@ def fibonacciGenerator(n,lim)
 end
 
 # extracts prime factors
-def extractPrimeFactors(n)
+def extractFactors(n,prime=false)
   factors = (2..(Math.sqrt(n))).select { |i| isDivisibleBy(n,i) }
-  primeFactors = factors.select { |f| isPrime(f)}
+  if prime == true
+    factors = factors.select { |f| isPrime(f)}
+  end
 
-  return primeFactors
+  return factors
+end
+
+# determines if n is palindromic
+def isPalindrome(n)
+  n_string = n.to_s
+  n_string==n_string.reverse ? true : false
 end
