@@ -1,4 +1,4 @@
 require_relative 'utils'
 
-puts extractPrimeFactors(13195)
+puts extractPrimeFactors(600851475143)
 # only capturing numbers below 10

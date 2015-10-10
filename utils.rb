@@ -8,7 +8,7 @@ end
 # determines whether n is prime
 def isPrime(n)
   for i in (2..Math.sqrt(n))
-    if n % i != 0
+    if n % i == 0
       return false
     end
   end
@@ -27,7 +27,7 @@ def fibonacciGenerator(n,lim)
     nextSeq = seq[i] + seq[i+1]
     seq << nextSeq
   }
-  return sequence
+  return seq
 end
 
 # extracts prime factors
